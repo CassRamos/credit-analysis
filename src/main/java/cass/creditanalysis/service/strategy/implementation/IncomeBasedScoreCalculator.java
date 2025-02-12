@@ -1,8 +1,10 @@
-package cass.creditanalysis.service.implementation;
+package cass.creditanalysis.service.strategy.implementation;
 
 import cass.creditanalysis.domain.Proposal;
-import cass.creditanalysis.service.ScoreCalculation;
+import cass.creditanalysis.service.strategy.ScoreCalculation;
+import org.springframework.stereotype.Component;
 
+@Component
 public class IncomeBasedScoreCalculator implements ScoreCalculation {
 
     @Override

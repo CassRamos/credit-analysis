@@ -1,4 +1,4 @@
-package cass.creditanalysis.service;
+package cass.creditanalysis.service.strategy;
 
 import cass.creditanalysis.domain.Proposal;
 
