@@ -8,3 +8,5 @@ spring:
 rabbitmq:
   pending-proposal:
     credit-analysis: pending-proposal.credit-analysis
+  completed-proposal:
+    exchange: completed-proposal.exchange
