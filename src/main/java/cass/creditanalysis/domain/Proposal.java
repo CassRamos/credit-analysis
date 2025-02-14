@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class Proposal {
 
-    private Long Id;
+    private Long id;
     private Double requestedAmount;
     private int paymentDeadline;
     private Boolean approved;

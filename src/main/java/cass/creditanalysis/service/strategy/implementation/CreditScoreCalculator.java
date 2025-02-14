@@ -1,6 +1,8 @@
 package cass.creditanalysis.service.strategy.implementation;
 
+import cass.creditanalysis.domain.NotificationMessages;
 import cass.creditanalysis.domain.Proposal;
+import cass.creditanalysis.exception.StrategyException;
 import cass.creditanalysis.service.strategy.ScoreCalculation;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -16,7 +18,8 @@ public class CreditScoreCalculator implements ScoreCalculation {
         int score = generateRandomScore();
 
         if (score < 200) {
-            throw new RuntimeException("Score is too low");
+            String message = NotificationMessages.LOW_SCORE.getFormattedMessage(proposal.getUser().getName());
+            throw new StrategyException(message);
         } else if (score <= 450) {
             return 150;
         } else if (score <= 600) {
